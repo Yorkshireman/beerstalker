@@ -35,7 +35,7 @@
       </form>
       <ul class='results list-group'>
         <li class='list-group-item' ng-repeat='result in searchResult'>
-          {{result.name}}
+          <a ng-href="{{result.event_url}}"> {{ result.name }} </a>
         </li>
       </ul>
     </main>
