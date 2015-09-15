@@ -28,12 +28,13 @@
     <main class="container container-narrow">
       <h3>Search for events near you that have free beer.</h3><br>
       <p class="lead">Enter your city:</p>
-      <form>
+      <form class='form-inline'>
         <div class="form-group">
-          <input type="text_field" class="form-control" ng-model="cityName"><br>
-          <button class="search btn btn-lg btn-primary" ng-click="search()">Stalk the Beer</button>
+          <input type="text_field" class="form-control" ng-model="cityName">
         </div>
+        <button class="search btn btn-primary" ng-click="search()">Stalk the Beer</button>
       </form>
+      <br>
       <ul class='results list-group'>
         <li class='list-group-item' ng-repeat='result in searchResult'>
           <a ng-href="{{result.event_url}}"> {{ result.name }} </a>
