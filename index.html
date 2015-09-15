@@ -13,7 +13,7 @@
     <script src="js/beerStalkController.js"></script>
   </head>
 
-  <body ng-controller="BeerStalkController as beerStalkCtrl">
+  <body ng-controller="BeerStalkController">
 
     <nav class="navbar navbar-default">
       <div class="container container-narrow">
@@ -26,15 +26,18 @@
     </nav>
 
     <main class="container container-narrow">
-      <p class='lead'>
-        Enter your city:
-      </p>
+      <p class="lead">Enter your city:</p>
       <form>
         <div class="form-group">
-          <input type="text_field" class="form-control"><br>
-          <button class="search btn btn-primary btn-lg" ng-click="search()">Stalk the Beer</button>
+          <input type="text_field" class="form-control" ng-model="cityName"><br>
+          <button class="search btn btn-lg btn-primary" ng-click="search()">Stalk the Beer</button>
         </div>
       </form>
+      <ul class='results list-group'>
+        <li class='list-group-item' ng-repeat='result in searchResult'>
+          {{result.name}}
+        </li>
+      </ul>
     </main>
 
   </body>
