@@ -1397,7 +1397,7 @@ body {
   font-size: 14px;
   line-height: 1.42857;
   color: #333333;
-  background-color: red;
+  background-color: blue;
 }
 
 input,
@@ -1444,7 +1444,7 @@ img {
 .img-thumbnail {
   padding: 4px;
   line-height: 1.42857;
-  background-color: red;
+  background-color: blue;
   border: 1px solid #ddd;
   border-radius: 4px;
   -webkit-transition: all 0.2s ease-in-out;
@@ -2874,7 +2874,7 @@ th {
   border-top: 2px solid #ddd;
 }
 .table .table {
-  background-color: red;
+  background-color: blue;
 }
 
 .table-condensed > thead > tr > th,
@@ -4552,7 +4552,7 @@ tbody.collapse.in {
 }
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
   color: #555555;
-  background-color: red;
+  background-color: blue;
   border: 1px solid #ddd;
   border-bottom-color: transparent;
   cursor: default;
@@ -4628,7 +4628,7 @@ tbody.collapse.in {
   .nav-tabs.nav-justified > .active > a:hover,
   .nav-tabs-justified > .active > a:focus,
   .nav-tabs.nav-justified > .active > a:focus {
-    border-bottom-color: red;
+    border-bottom-color: blue;
   }
 }
 
@@ -5488,7 +5488,7 @@ a.badge:hover, a.badge:focus {
   padding: 4px;
   margin-bottom: 20px;
   line-height: 1.42857;
-  background-color: red;
+  background-color: blue;
   border: 1px solid #ddd;
   border-radius: 4px;
   -webkit-transition: border 0.2s ease-in-out;
