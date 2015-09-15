@@ -30,7 +30,7 @@ beerStalker.controller('BeerStalkController', ['$scope', '$resource', function($
           }
         }
 
-        $scope.searchResult = (filteredResults)//filtered by 'free beer';
+        $scope.searchResult = (filteredResults)
       });
     };
 }]);
