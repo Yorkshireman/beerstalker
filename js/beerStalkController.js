@@ -10,6 +10,7 @@ beerStalker.controller('BeerStalkController', ['$scope', '$resource', function($
         key: 'key=646f252216306e6d712d7c536a3c2565',
         callback: 'JSON_CALLBACK' },
         { get: { method: 'JSONP'} });
+        
       searchResource.get().$promise.then(function(response){
           $scope.searchResult = response.results;
           console.log($scope.searchResult[0].visibility)
