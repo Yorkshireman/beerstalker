@@ -1,1 +1,1 @@
-angular.module('BeerStalker', ['ngResource']);
+var beerStalker = angular.module('BeerStalker',['ngResource']);
