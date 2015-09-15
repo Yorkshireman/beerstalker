@@ -7324,6 +7324,9 @@ button.close {
   max-width: 768px;
 }
 
+main h3 {
+  text-align: center;
+}
 main p {
   text-align: center;
 }
