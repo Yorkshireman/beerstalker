@@ -14,17 +14,11 @@
 
   <body ng-controller="BeerStalkController">
   <button class="search" ng-click="search()">Button</button>
-  results:
-    <!-- <ul class='results'>
-      <li ng-repeat='event in BeerStalkController.searchResult'>
-        {{event[0].description.text}}
+    <ul class='results'>
+      <li ng-repeat='result in searchResult'>
+        {{result.name}}
       </li>
-    </ul> -->
-    <table class='table table-striped'>
-      <tr ng-repeat='event in BeerStalkController.searchTry'>
-          <td>{{event.visibility}}</td>
-      </tr>
-    </table>
+    </ul>
   <div></div>
 
 
