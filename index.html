@@ -31,7 +31,7 @@
     </form>
     <ul class='results'>
       <li ng-repeat='result in searchResult'>
-        {{result.name}}
+        <a ng-href="{{result.event_url}}"> {{ result.name }} </a>
       </li>
     </ul>
   </main>
