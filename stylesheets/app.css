@@ -7368,4 +7368,11 @@ li {
   letter-spacing: 0.3px;
 }
 
+#error_div {
+  display: none;
+}
+#error_div h4 {
+  line-height: 1.5em;
+}
+
 /*# sourceMappingURL=app.css.map */

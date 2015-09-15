@@ -28,13 +28,21 @@
     <main class="container container-narrow">
       <h3>Search for events near you that have free beer.</h3><br>
       <p class="lead">Enter your city:</p>
+
       <form class='form-inline'>
         <div class="form-group">
           <input type="text_field" class="form-control" ng-model="cityName">
         </div>
         <button class="search btn btn-primary" ng-click="search()">Stalk the Beer</button>
+
+        <div id="error_div">
+        <h4>No results, sorry!</h4>
+          <h4>You either entered an invalid term (must be a city/town name), or there are no events that have free beer in your area anytime soon. Try a bigger city, you beer stalker!</h4>
+        </div>
+
       </form>
       <br>
+
       <ul class='results list-group'>
         <li class='list-group-item' ng-repeat='result in searchResult'>
           <a ng-href="{{result.event_url}}"> {{ result.name }} </a>
@@ -45,6 +53,7 @@
           </div>
         </li>
       </ul>
+
     </main>
 
   </body>
