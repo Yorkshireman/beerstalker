@@ -7368,10 +7368,10 @@ li {
   letter-spacing: 0.3px;
 }
 
-#error_div {
+#error_div, #no_results_div {
   display: none;
 }
-#error_div h4 {
+#error_div h4, #no_results_div h4 {
   line-height: 1.5em;
 }
 

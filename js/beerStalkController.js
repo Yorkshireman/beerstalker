@@ -30,7 +30,14 @@ beerStalker.controller('BeerStalkController', ['$scope', '$resource', function($
           }
         }
 
-        $scope.searchResult = (filteredResults)
+        if(filteredResults.length === 0) {
+          $('.results').hide();
+          $('#no_results_div').fadeIn(500).delay(8000).fadeOut(1000);
+          return
+        } else {
+          $('.results').show();
+          $scope.searchResult = filteredResults
+        }
       });
     };
 }]);
