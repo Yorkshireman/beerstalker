@@ -31,7 +31,9 @@
     </form>
     <ul class='results'>
       <li ng-repeat='result in searchResult'>
-        {{result.name}}
+        <p>{{result.name}}</p>
+        <p>{{result.venue.address_1}}</p>
+        
       </li>
     </ul>
   </main>
