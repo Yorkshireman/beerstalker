@@ -3,7 +3,8 @@ beerStalker.controller('BeerStalkController', ['$scope', '$resource', function($
   var self = this;
 
   $scope.search = function() {
-    var searchResource = $resource('https://api.meetup.com/2/open_events.json?and_text=true&:text&:country&:city&:key', {
+    var searchResource = $resource('https://api.meetup.com/2/open_events.json?and_text=true&:text&:country&:city&:key&:text_format', {
+        text_format: "text_format=plain",
         text: "text=free+beer",
         country: "country=gb",
         city: "city=" + $scope.cityName,
@@ -12,8 +13,14 @@ beerStalker.controller('BeerStalkController', ['$scope', '$resource', function($
         { get: { method: 'JSONP'} });
         
       searchResource.get().$promise.then(function(response){
-          $scope.searchResult = response.results;
-          console.log($scope.searchResult[0].visibility)
+        var filteredResults = [];
+        for (index = 0; index < response.results.length; index++) {
+          var result = response.results[index].description;
+          if(result.indexOf('free beer') >= 0) {
+            filteredResults.push(response.results[index]);
+          }
+        }
+        $scope.searchResult = (filteredResults)//filtered by 'free beer';
       });
     };
 }]);
