@@ -2,6 +2,8 @@
 <html lang="en" ng-app="BeerStalker">
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>BeerStalker</title>
     <link rel="stylesheet" href="stylesheets/app.css">
     <script src="bower_components/jquery/dist/jquery.js"></script>
@@ -14,18 +16,23 @@
   <body ng-controller="BeerStalkController as beerStalkCtrl">
 
     <nav class="navbar navbar-default">
-      <div class="container-fluid container-narrow">
+      <div class="container container-narrow">
         <div class="navbar-header">
-          <a class="navbar-brand" href="#">Beer Stalker</a>
+          <div class="navbar-brand">
+            <h4><img src='stylesheets/assets/logo.jpg' alt='logo'>Beer Stalker</h4>
+          </div>
         </div>
       </div>
     </nav>
 
     <main class="container container-narrow">
-      <form class="form-inline">
+      <p class='lead'>
+        Enter your city:
+      </p>
+      <form>
         <div class="form-group">
-          <input type="text_field" class="form-control">
-          <button class="search btn btn-primary" ng-click="search()">Stalk the Beer</button>
+          <input type="text_field" class="form-control"><br>
+          <button class="search btn btn-primary btn-lg" ng-click="search()">Stalk the Beer</button>
         </div>
       </form>
     </main>
