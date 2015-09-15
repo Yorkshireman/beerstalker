@@ -1,35 +1,37 @@
 <!doctype html>
 <html lang="en" ng-app="BeerStalker">
-  <head>
-    <meta charset="utf-8">
-    <title>BeerStalker</title>
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="css_bootstrap_overrides/mystyles.css">
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/angular-resource/angular-resource.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/beerStalkController.js"></script>
-  </head>
 
-  <body ng-controller="BeerStalkController as beerStalkCtrl">
+<head>
+  <meta charset="utf-8">
+  <title>BeerStalker</title>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="css_bootstrap_overrides/mystyles.css">
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/beerStalkController.js"></script>
+</head>
 
-    <nav class="navbar navbar-default">
-      <div class="container-fluid container-narrow">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="#">Beer Stalker</a>
-        </div>
+<body ng-controller="BeerStalkController as beerStalkCtrl">
+
+  <nav class="navbar navbar-default">
+    <div class="container-fluid container-narrow">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Beer Stalker</a>
       </div>
-    </nav>
+    </div>
+  </nav>
 
-    <main class="container container-narrow">
-      <form class="form-inline">
-        <div class="form-group">
-          <input type="text_field" class="form-control" ng-model="cityName">
-          <button class="search btn btn-primary" ng-click="search()">Stalk the Beer</button>
-        </div>
-      </form>
-    </main>
+  <main class="container container-narrow">
+    <form class="form-inline">
+      <div class="form-group">
+        <input type="text_field" class="form-control" ng-model="cityName">
+        <button class="search btn btn-primary" ng-click="search()">Stalk the Beer</button>
+      </div>
+    </form>
+  </main>
 
-  </body>
+</body>
+
 </html>
