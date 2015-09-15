@@ -18,11 +18,11 @@ beerStalker.controller('BeerStalkController',['$scope', '$resource', function($s
 //   });
 // }
 
-$scope.search = function() {
-    searchResource.get().$promise.then(function(response){
-        self.searchResult = response.results;
-        console.log(self.searchResult[0].name)
-    });
-}
+  $scope.search = function() {
+      searchResource.get().$promise.then(function(response){
+          self.searchResult = response.results;
+          console.log(self.searchResult[0].name)
+      });
+  }
 
 }]);
