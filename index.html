@@ -13,8 +13,7 @@
   <script src="js/beerStalkController.js"></script>
 </head>
 
-<body ng-controller="BeerStalkController as beerStalkCtrl">
-
+<body ng-controller="BeerStalkController">
   <nav class="navbar navbar-default">
     <div class="container-fluid container-narrow">
       <div class="navbar-header">
@@ -30,6 +29,11 @@
         <button class="search btn btn-primary" ng-click="search()">Stalk the Beer</button>
       </div>
     </form>
+    <ul class='results'>
+      <li ng-repeat='result in searchResult'>
+        {{result.name}}
+      </li>
+    </ul>
   </main>
 
 </body>
