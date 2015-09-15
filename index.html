@@ -36,6 +36,7 @@
       <ul class='results list-group'>
         <li class='list-group-item' ng-repeat='result in searchResult'>
           <a ng-href="{{result.event_url}}"> {{ result.name }} </a>
+          {{ result.time | date : 'HH:mm dd-MMM-yyyy' }}
         </li>
       </ul>
     </main>
