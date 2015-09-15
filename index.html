@@ -4,18 +4,32 @@
     <meta charset="utf-8">
     <title>BeerStalker</title>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css_bootstrap_overrides/mystyles.css">
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="js/app.js"></script>
     <script src="js/beerStalkController.js"></script>
-
   </head>
 
   <body ng-controller="BeerStalkController as beerStalkCtrl">
-  <button class="search" ng-click="search()">Button</button>
-  <div></div>
 
+    <nav class="navbar navbar-default">
+      <div class="container-fluid container-narrow">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Beer Stalker</a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container container-narrow">
+      <form class="form-inline">
+        <div class="form-group">
+          <input type="text_field" class="form-control">
+          <button class="search btn btn-primary" ng-click="search()">Stalk the Beer</button>
+        </div>
+      </form>
+    </main>
 
   </body>
 </html>
