@@ -39,6 +39,9 @@
           <a ng-href="{{result.event_url}}"> {{ result.name }} </a>
           {{ result.time | date : 'HH:mm' }}
           {{ result.time | date : 'dd MMM yyyy' }}
+          <div class='address'>
+            <a href='https://maps.google.com?q={{ result.venue.address_1}}'>{{ result.venue.address_1 }}</a>
+          </div>
         </li>
       </ul>
     </main>
