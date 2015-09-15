@@ -8,8 +8,8 @@ beerStalker.controller('BeerStalkController',['$scope', '$resource', function($s
   //    key: 'key=646f252216306e6d712d7c536a3c2565'}
   //   );
 
-  var searchResource = $resource('https://api.meetup.com/2/open_events.json?:text&:key',
-    {text: "text=free+beer", key: 'key=646f252216306e6d712d7c536a3c2565', callback:'JSON_CALLBACK'}, {get:{method:'JSONP'}})
+  var searchResource = $resource('https://api.meetup.com/2/open_events.json?and_text=true&:text&:country&:city&:key',
+    {text: "text=free+beer", country: "country=gb", city: "city=London", key: 'key=646f252216306e6d712d7c536a3c2565', callback:'JSON_CALLBACK'}, {get:{method:'JSONP'}})
 
 // function search(){
 //   searchResource.get().$promise.then(function(response){
