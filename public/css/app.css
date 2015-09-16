@@ -7330,10 +7330,7 @@ body {
   background-size: cover;
 }
 
-main h3 {
-  text-align: center;
-}
-main p {
+main {
   text-align: center;
 }
 main .lead {
@@ -7381,6 +7378,10 @@ nav .container {
 .form-group input {
   max-width: 255px;
   margin: auto;
+}
+
+ul {
+  text-align: left;
 }
 
 li {
