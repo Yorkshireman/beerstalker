@@ -1,5 +1,5 @@
 @import "variables";
-@import "../public/bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 @import url(https://fonts.googleapis.com/css?family=Tangerine:400,700|Special+Elite|Oswald);
 
 .container-narrow {
@@ -7,7 +7,7 @@
 }
 
 body{
-  background-image: url("../beer_bg (1).jpg");
+  background-image: url("../images/beer_bg (1).jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -30,7 +30,7 @@ nav {
     margin-left: auto;
     margin-right: auto;
   }
-  background-image: url("../beer_bg copy (1).jpg");
+  background-image: url("../images/beer_bg copy (1).jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -68,4 +68,8 @@ li {
   h4 {
     line-height: 1.5em;
   }
+}
+
+html {
+  height: 100%;
 }

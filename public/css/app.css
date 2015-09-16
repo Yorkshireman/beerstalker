@@ -7,7 +7,6 @@
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 @import url(https://fonts.googleapis.com/css?family=Tangerine:400,700|Special+Elite|Oswald);
 html {
-  height: 100%;
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -7326,7 +7325,7 @@ button.close {
 }
 
 body {
-  background-image: url("../beer_bg (1).jpg");
+  background-image: url("../images/beer_bg (1).jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -7343,7 +7342,7 @@ form {
 }
 
 nav {
-  background-image: url("../beer_bg copy (1).jpg");
+  background-image: url("../images/beer_bg copy (1).jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -7385,6 +7384,10 @@ li {
 }
 #error_div h4, #no_results_div h4 {
   line-height: 1.5em;
+}
+
+html {
+  height: 100%;
 }
 
 /*# sourceMappingURL=app.css.map */
