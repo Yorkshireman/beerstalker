@@ -1,6 +1,6 @@
 public/bower_components
+bower_components
 node_modules
 .sass-cache
 .DS_Store
 public/.DS_Store
-bower_components
