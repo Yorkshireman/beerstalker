@@ -12,7 +12,7 @@ module.exports = function(grunt) {
           expand: true,
           cwd: 'sass',
           src: ['*.scss'],
-          dest: 'stylesheets',
+          dest: 'public/stylesheets',
           ext: '.css'
         }]
       }
