@@ -1,44 +1,50 @@
 <!doctype html>
 <html lang="en" ng-app="BeerStalker">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BeerStalker</title>
+    <link rel="stylesheet" href="stylesheets/app.css">
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/beerStalkController.js"></script>
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <title>BeerStalker</title>
-  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
-  <link rel="stylesheet" href="css_bootstrap_overrides/mystyles.css">
-  <script src="bower_components/jquery/dist/jquery.js"></script>
-  <script src="bower_components/angular/angular.js"></script>
-  <script src="bower_components/angular-resource/angular-resource.js"></script>
-  <script src="js/app.js"></script>
-  <script src="js/beerStalkController.js"></script>
-</head>
+  <body ng-controller="BeerStalkController">
 
-<body ng-controller="BeerStalkController">
-  <nav class="navbar navbar-default">
-    <div class="container-fluid container-narrow">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="#">Beer Stalker</a>
+    <nav class="navbar navbar-default">
+      <div class="container container-narrow">
+        <div class="navbar-header">
+          <div class="navbar-brand">
+            <h4><img src='stylesheets/assets/logo.png' alt='logo'>Beer Stalker</h4>
+          </div>
+        </div>
       </div>
-    </div>
-  </nav>
-
-  <main class="container container-narrow">
-    <form class="form-inline">
-      <div class="form-group">
-        <input type="text_field" class="form-control" ng-model="cityName">
-        <button class="search btn btn-primary" ng-click="search()">Stalk the Beer</button>
-      </div>
-    </form>
-    <ul class='results'>
-      <li ng-repeat='result in searchResult'>
-        <p>{{result.name}}</p>
-        <p>{{result.venue.address_1}}</p>
-        
-      </li>
-    </ul>
-  </main>
+    </nav>
 
 </body>
+    <main class="container container-narrow">
+      <h3>Search for events near you that have free beer.</h3><br>
+      <p class="lead">Enter your city:</p>
+      <form>
+        <div class="form-group">
+          <input type="text_field" class="form-control" ng-model="cityName"><br>
+          <button class="search btn btn-lg btn-primary" ng-click="search()">Stalk the Beer</button>
+        </div>
+      </form>
+      <ul class='results list-group'>
+        <li class='list-group-item' ng-repeat='result in searchResult'>
+          <a ng-href="{{result.event_url}}"> {{ result.name }} </a>
+          {{ result.time | date : 'HH:mm' }}
+          {{ result.time | date : 'dd MMM yyyy' }}
+        </li>
+      </ul>
+    </main>
 
+
+  </body>
 </html>
 
