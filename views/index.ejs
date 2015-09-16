@@ -50,12 +50,16 @@
       <br>
 
       <ul class='results list-group'>
-        <li class='list-group-item' ng-repeat='result in searchResult'>
-          <a ng-href="{{result.event_url}}"> {{ result.name }} </a>
-          {{ result.time | date : 'HH:mm' }}
-          {{ result.time | date : 'dd MMM yyyy' }}
-          <div class='address'>
-            <a href='https://maps.google.com?q={{ result.venue.address_1}}'>{{ result.venue.address_1 }}</a>
+        <li class='list-group-item row' ng-repeat='result in searchResult'>
+          <div class='col-xs-8'>
+            <h5><a ng-href="{{result.event_url}}"> {{ result.name }} </a></h5>
+            <div class='address'>
+              <a href='https://maps.google.com?q={{ result.venue.address_1}}'>{{ result.venue.address_1 }}</a>
+            </div>
+          </div>
+          <div class='col-xs-4'>
+            {{ result.time | date : 'HH:mm' }}
+            {{ result.time | date : 'dd MMM yyyy' }}
           </div>
         </li>
       </ul>

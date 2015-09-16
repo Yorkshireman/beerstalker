@@ -7324,6 +7324,10 @@ button.close {
   max-width: 480px;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   background-image: url("../images/beer_bg (1).jpg");
   background-repeat: no-repeat;
@@ -7383,6 +7387,9 @@ nav .container {
 ul {
   text-align: left;
 }
+ul h5 {
+  font-size: 1.2em;
+}
 
 li {
   letter-spacing: 0.3px;
@@ -7393,10 +7400,6 @@ li {
 }
 #error_div h4, #no_results_div h4 {
   line-height: 1.5em;
-}
-
-html {
-  height: 100%;
 }
 
 /*# sourceMappingURL=app.css.map */
