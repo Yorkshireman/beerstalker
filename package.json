@@ -1,7 +1,10 @@
 {
   "name": "beerstalker",
   "version": "1.0.0",
-  "description": "",
+  "engines": {
+    "npm": "2.1.x"
+  },
+  "description": "an app to stalk free beer",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
