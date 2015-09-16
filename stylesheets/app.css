@@ -7,6 +7,7 @@
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 @import url(https://fonts.googleapis.com/css?family=Tangerine:400,700|Special+Elite|Oswald);
 html {
+  height: 100%;
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -3734,38 +3735,38 @@ a.btn.disabled, fieldset[disabled] a.btn {
 
 .btn-primary {
   color: black;
-  background-color: #FFF60D;
-  border-color: #f3e900;
+  background-color: #FFFFFF;
+  border-color: #f2f2f2;
 }
 .btn-primary:focus, .btn-primary.focus {
   color: black;
-  background-color: #d9d100;
-  border-color: #736f00;
+  background-color: #e6e6e6;
+  border-color: #b3b3b3;
 }
 .btn-primary:hover {
   color: black;
-  background-color: #d9d100;
-  border-color: #b5af00;
+  background-color: #e6e6e6;
+  border-color: #d4d4d4;
 }
 .btn-primary:active, .btn-primary.active, .open > .btn-primary.dropdown-toggle {
   color: black;
-  background-color: #d9d100;
-  border-color: #b5af00;
+  background-color: #e6e6e6;
+  border-color: #d4d4d4;
 }
 .btn-primary:active:hover, .btn-primary:active:focus, .btn-primary:active.focus, .btn-primary.active:hover, .btn-primary.active:focus, .btn-primary.active.focus, .open > .btn-primary.dropdown-toggle:hover, .open > .btn-primary.dropdown-toggle:focus, .open > .btn-primary.dropdown-toggle.focus {
   color: black;
-  background-color: #b5af00;
-  border-color: #736f00;
+  background-color: #d4d4d4;
+  border-color: #b3b3b3;
 }
 .btn-primary:active, .btn-primary.active, .open > .btn-primary.dropdown-toggle {
   background-image: none;
 }
 .btn-primary.disabled, .btn-primary.disabled:hover, .btn-primary.disabled:focus, .btn-primary.disabled.focus, .btn-primary.disabled:active, .btn-primary.disabled.active, .btn-primary[disabled], .btn-primary[disabled]:hover, .btn-primary[disabled]:focus, .btn-primary[disabled].focus, .btn-primary[disabled]:active, .btn-primary[disabled].active, fieldset[disabled] .btn-primary, fieldset[disabled] .btn-primary:hover, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .btn-primary.focus, fieldset[disabled] .btn-primary:active, fieldset[disabled] .btn-primary.active {
-  background-color: #FFF60D;
-  border-color: #f3e900;
+  background-color: #FFFFFF;
+  border-color: #f2f2f2;
 }
 .btn-primary .badge {
-  color: #FFF60D;
+  color: #FFFFFF;
   background-color: black;
 }
 
@@ -5007,8 +5008,8 @@ tbody.collapse.in {
   }
 }
 .navbar-default {
-  background-color: #FFF60D;
-  border-color: #ebe200;
+  background-color: #FFFFFF;
+  border-color: #eeeeee;
 }
 .navbar-default .navbar-brand {
   color: #777;
@@ -5029,7 +5030,7 @@ tbody.collapse.in {
 }
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
   color: #555;
-  background-color: #ebe200;
+  background-color: #eeeeee;
 }
 .navbar-default .navbar-nav > .disabled > a, .navbar-default .navbar-nav > .disabled > a:hover, .navbar-default .navbar-nav > .disabled > a:focus {
   color: #ccc;
@@ -5046,10 +5047,10 @@ tbody.collapse.in {
 }
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
-  border-color: #ebe200;
+  border-color: #eeeeee;
 }
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
-  background-color: #ebe200;
+  background-color: #eeeeee;
   color: #555;
 }
 @media (max-width: 767px) {
@@ -5062,7 +5063,7 @@ tbody.collapse.in {
   }
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
     color: #555;
-    background-color: #ebe200;
+    background-color: #eeeeee;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:focus {
     color: #ccc;
@@ -7324,6 +7325,12 @@ button.close {
   max-width: 480px;
 }
 
+body {
+  background-image: url("../beer_bg (1).jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 main h3 {
   text-align: center;
 }
@@ -7335,6 +7342,11 @@ form {
   text-align: center;
 }
 
+nav {
+  background-image: url("../beer_bg copy (1).jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 nav .container {
   margin-left: auto;
   margin-right: auto;
