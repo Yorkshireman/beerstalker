@@ -1,9 +1,9 @@
 @import "variables";
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
-@import url(https://fonts.googleapis.com/css?family=Tangerine:400,700);
+@import url(https://fonts.googleapis.com/css?family=Tangerine:400,700|Special+Elite|Oswald);
 
 .container-narrow {
-  max-width: 768px;
+  max-width: 480px;
 }
 
 main {
@@ -41,5 +41,22 @@ nav {
     font-weight: bold;
     color: black;
     padding-top: 0.12em;
+  }
+}
+
+.btn {
+  font-family: 'Special Elite', cursive;
+  font-weight: bold;
+  padding-top: 12px;
+}
+
+li {
+  letter-spacing: 0.3px;
+}
+
+#error_div, #no_results_div {
+  display: none;
+  h4 {
+    line-height: 1.5em;
   }
 }
