@@ -27,14 +27,14 @@
 
     <main class="container container-narrow">
       <h3>Search for events near you that have free beer.</h3><br>
-      <p class="lead">Enter your city:</p>
+        <button class="search btn btn-primary" ng-click="localSearch()">Stalk the free beer around you!</button>
+      <p class="lead">or enter a city:</p>
 
       <form class='form-inline'>
         <div class="form-group">
           <input type="text_field" class="form-control" ng-model="cityName">
         </div>
-        <button class="search btn btn-primary" ng-click="search()">Stalk the Beer</button>
-        <button class="search btn btn-primary" ng-click="localSearch()">Use my current location!</button>
+        <button class="search btn btn-primary" ng-click="search()">Stalk!</button>
 
         <div id="error_div">
         <h4>Invalid search term</h4>

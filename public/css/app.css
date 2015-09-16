@@ -7322,6 +7322,7 @@ button.close {
 }
 .container-narrow {
   max-width: 480px;
+  text-align: center;
 }
 
 body {
@@ -7335,6 +7336,9 @@ main h3 {
 }
 main p {
   text-align: center;
+}
+main .lead {
+  margin-top: 1em;
 }
 
 form {
@@ -7373,6 +7377,11 @@ nav .container {
   font-family: 'Special Elite', cursive;
   font-weight: bold;
   padding-top: 12px;
+}
+
+.form-group input {
+  max-width: 255px;
+  margin: auto;
 }
 
 li {

@@ -4,6 +4,7 @@
 
 .container-narrow {
   max-width: 480px;
+  text-align: center;
 }
 
 body{
@@ -19,7 +20,12 @@ main {
   p {
     text-align: center;
   }
+  .lead {
+    margin-top: 1em;
+  }
 }
+
+
 
 form {
   text-align: center;
@@ -57,6 +63,13 @@ nav {
   font-family: 'Special Elite', cursive;
   font-weight: bold;
   padding-top: 12px;
+}
+
+.form-group {
+  input {
+    max-width: 255px;
+    margin: auto;
+  }
 }
 
 li {
