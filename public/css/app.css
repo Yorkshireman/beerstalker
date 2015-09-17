@@ -3734,38 +3734,38 @@ a.btn.disabled, fieldset[disabled] a.btn {
 
 .btn-primary {
   color: black;
-  background-color: #FFFFFF;
-  border-color: #f2f2f2;
+  background-color: #FFF60D;
+  border-color: #f3e900;
 }
 .btn-primary:focus, .btn-primary.focus {
   color: black;
-  background-color: #e6e6e6;
-  border-color: #b3b3b3;
+  background-color: #d9d100;
+  border-color: #736f00;
 }
 .btn-primary:hover {
   color: black;
-  background-color: #e6e6e6;
-  border-color: #d4d4d4;
+  background-color: #d9d100;
+  border-color: #b5af00;
 }
 .btn-primary:active, .btn-primary.active, .open > .btn-primary.dropdown-toggle {
   color: black;
-  background-color: #e6e6e6;
-  border-color: #d4d4d4;
+  background-color: #d9d100;
+  border-color: #b5af00;
 }
 .btn-primary:active:hover, .btn-primary:active:focus, .btn-primary:active.focus, .btn-primary.active:hover, .btn-primary.active:focus, .btn-primary.active.focus, .open > .btn-primary.dropdown-toggle:hover, .open > .btn-primary.dropdown-toggle:focus, .open > .btn-primary.dropdown-toggle.focus {
   color: black;
-  background-color: #d4d4d4;
-  border-color: #b3b3b3;
+  background-color: #b5af00;
+  border-color: #736f00;
 }
 .btn-primary:active, .btn-primary.active, .open > .btn-primary.dropdown-toggle {
   background-image: none;
 }
 .btn-primary.disabled, .btn-primary.disabled:hover, .btn-primary.disabled:focus, .btn-primary.disabled.focus, .btn-primary.disabled:active, .btn-primary.disabled.active, .btn-primary[disabled], .btn-primary[disabled]:hover, .btn-primary[disabled]:focus, .btn-primary[disabled].focus, .btn-primary[disabled]:active, .btn-primary[disabled].active, fieldset[disabled] .btn-primary, fieldset[disabled] .btn-primary:hover, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .btn-primary.focus, fieldset[disabled] .btn-primary:active, fieldset[disabled] .btn-primary.active {
-  background-color: #FFFFFF;
-  border-color: #f2f2f2;
+  background-color: #FFF60D;
+  border-color: #f3e900;
 }
 .btn-primary .badge {
-  color: #FFFFFF;
+  color: #FFF60D;
   background-color: black;
 }
 
@@ -5007,8 +5007,8 @@ tbody.collapse.in {
   }
 }
 .navbar-default {
-  background-color: #FFFFFF;
-  border-color: #eeeeee;
+  background-color: #FFF60D;
+  border-color: #ebe200;
 }
 .navbar-default .navbar-brand {
   color: #777;
@@ -5029,7 +5029,7 @@ tbody.collapse.in {
 }
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
   color: #555;
-  background-color: #eeeeee;
+  background-color: #ebe200;
 }
 .navbar-default .navbar-nav > .disabled > a, .navbar-default .navbar-nav > .disabled > a:hover, .navbar-default .navbar-nav > .disabled > a:focus {
   color: #ccc;
@@ -5046,10 +5046,10 @@ tbody.collapse.in {
 }
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
-  border-color: #eeeeee;
+  border-color: #ebe200;
 }
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
-  background-color: #eeeeee;
+  background-color: #ebe200;
   color: #555;
 }
 @media (max-width: 767px) {
@@ -5062,7 +5062,7 @@ tbody.collapse.in {
   }
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
     color: #555;
-    background-color: #eeeeee;
+    background-color: #ebe200;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:focus {
     color: #ccc;
@@ -7320,40 +7320,21 @@ button.close {
     display: none !important;
   }
 }
+/********************************************************
+  GLOBALS
+********************************************************/
+.btn {
+  font-family: 'Special Elite', cursive;
+  font-weight: bold;
+}
+
 .container-narrow {
   max-width: 480px;
 }
 
-html {
-  height: 100%;
-}
-
-body {
-  background-image: url("../images/beer_bg (1).jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.col-xs-4 {
-  padding-top: 8px;
-}
-
-main {
-  text-align: center;
-}
-main .lead {
-  margin-top: 1em;
-}
-
-form {
-  text-align: center;
-}
-
-nav {
-  background-image: url("../images/beer_bg copy (1).jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+/********************************************************
+  NAVBAR
+********************************************************/
 nav .container {
   margin-left: auto;
   margin-right: auto;
@@ -7377,33 +7358,53 @@ nav .container {
   padding-top: 0.12em;
 }
 
-.btn {
-  font-family: 'Special Elite', cursive;
-  font-weight: bold;
-  padding-top: 12px;
+/********************************************************
+  MAIN BODY WRAPPER
+********************************************************/
+main {
+  text-align: center;
 }
 
-.form-group input {
-  max-width: 255px;
-  margin: auto;
+/********************************************************
+  AUTO-LOCATE SECTION
+********************************************************/
+.auto-locate {
+  margin: 4em 0 4.5em 0;
+}
+.auto-locate button {
+  padding-top: 14px;
+}
+.auto-locate p {
+  color: #777777;
 }
 
-ul {
-  text-align: left;
+/********************************************************
+  MANUAL SEARCH SECTION
+********************************************************/
+.manual-search {
+  width: 100%;
 }
-ul h5 {
-  font-size: 1.2em;
+.manual-search form input {
+  display: inline;
+  float: left;
+  max-width: 63%;
 }
-
-li {
-  letter-spacing: 0.3px;
+.manual-search form button {
+  float: right;
+  padding-top: 9px;
+  height: 2.45em;
+  position: relative;
+  top: 0.2px;
 }
-
-#error_div, #no_results_div {
+.manual-search #error-div, .manual-search #no-results-div {
   display: none;
 }
-#error_div h4, #no_results_div h4 {
-  line-height: 1.5em;
+
+/********************************************************
+  RESULTS DIV
+********************************************************/
+.results li {
+  letter-spacing: 0.3px;
 }
 
 /*# sourceMappingURL=app.css.map */

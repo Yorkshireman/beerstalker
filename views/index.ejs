@@ -27,27 +27,31 @@
 
     <main class="container container-narrow">
       <h3>Search for events near you that have free beer.</h3>
-      <br>
-      <button id='search-button' class="search btn btn-primary" ng-click="localSearch()">Stalk the free beer around you!</button>
-      <p class="lead">or enter a city:</p>
 
-      <form class='form-inline'>
-        <div class="form-group">
-          <input type="text_field" class="form-control" ng-model="cityName">
-        </div>
-        <button class="search btn btn-primary" ng-click="search()">Stalk!</button>
+      <section class='auto-locate'>
+        <button id='search-button' class="search btn btn-primary btn-lg btn-block" ng-click="localSearch()">Stalk the beer</button>
+        <p>(using your current location)</p>
+      </section>
 
-        <div id="error_div">
-        <h4>Invalid search term</h4>
-          <h4>(Must be a UK city/town name)</h4>
-        </div>
+      <section class='manual-search'>
+        <h4>or enter a city:</h4>
 
-        <div id="no_results_div">
-          <h4>No free beer there! Try somewhere else?</h4>
-        </div>
+        <form class='form-inline'>
+          <div class="form-group">
+            <input type="text_field" class="form-control" ng-model="cityName">
+          </div>
+          <button class="search btn btn-primary" ng-click="search()">Stalk the Beer</button>
 
-      </form>
-      <br>
+          <div id="error-div">
+          <h4>Invalid search term</h4>
+            <h4>(Must be a UK city/town name)</h4>
+          </div>
+
+          <div id="no-results-div">
+            <h4>No free beer there! Try somewhere else?</h4>
+          </div>
+        </form>
+      <section>
 
       <ul class='results list-group'>
         <li class='list-group-item row' ng-repeat='result in searchResult'>

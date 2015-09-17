@@ -73,7 +73,7 @@ beerStalker.controller('BeerStalkController', ['$scope', '$resource', function($
             result.indexOf('free beer')
           }
           catch(err) {
-            $('#error_div').fadeIn(500).delay(8000).fadeOut(1000);
+            $('#error-div').fadeIn(500).delay(8000).fadeOut(1000);
             break;
           }
 
@@ -84,7 +84,7 @@ beerStalker.controller('BeerStalkController', ['$scope', '$resource', function($
 
         if(filteredResults.length === 0) {
           $('.results').hide();
-          $('#no_results_div').fadeIn(500).delay(8000).fadeOut(1000);
+          $('#no-results-div').fadeIn(500).delay(8000).fadeOut(1000);
           return
         } else {
           $('.results').show();
