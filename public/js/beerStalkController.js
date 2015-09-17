@@ -42,7 +42,6 @@ beerStalker.factory('Search', function($resource) {
           return
         } else {
           $('.results').show();
-          console.log(filteredResults)
           return filteredResults
         }
       });
@@ -51,7 +50,6 @@ beerStalker.factory('Search', function($resource) {
 });
 
 beerStalker.controller('BeerStalkController', ['$scope', '$resource', 'Search', function($scope, $resource, Search) {
-  var self = this;
   var lat
   var lon
 
@@ -82,7 +80,7 @@ beerStalker.controller('BeerStalkController', ['$scope', '$resource', 'Search', 
 
       searchLocalResource.get().$promise.then(function(response){
         var filteredResults = [];
-        
+
         for (index = 0; index < response.results.length; index++) {
           var result = response.results[index].description;
 
