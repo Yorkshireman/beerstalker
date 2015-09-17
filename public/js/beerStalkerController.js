@@ -105,20 +105,43 @@ beerStalker.factory('ApiCall', function($resource) {
 });
 
 beerStalker.controller('BeerStalkController', ['$scope', '$resource', 'ApiCall', function($scope, $resource, ApiCall) {
-  var lat
-  var lon
-
-  navigator.geolocation.getCurrentPosition(function(position) {
-   lat = position.coords.latitude;
-   lon = position.coords.longitude;
-  });
 
   $scope.customSearch = function() { ApiCall.customSearch($scope.cityName).then(function(results){
     $scope.searchResult = results
   }); };
 
 
-  $scope.autoSearch = function() { ApiCall.autoSearch(lat, lon).then(function(results){
-    $scope.searchResult = results
+  var geoLocation = {
+    getLocation: function() {
+
+      var deferred = $.Deferred();
+
+      // if geo location is supported
+      if(navigator.geolocation) {
+        // get current position and pass the results to getPostalCode or time out after 5 seconds if it fails
+        navigator.geolocation.getCurrentPosition(deferred.resolve, this.geoLocationError, {
+          timeout: 5000
+        });
+
+      } else {
+        //geo location isn't supported
+        alert('Your browser does not support Geo Location.');
+      }
+      return deferred.promise();
+    },
+
+    geoLocationError: function() {
+      alert('Geo Location failed.');
+    }
+  };
+
+
+  $scope.autoSearch = function() {$.when(geoLocation.getLocation()).then(function(data, textStatus, jqXHR) {
+    return [data.coords.longitude, data.coords.latitude];
+  }).then(function(location) {
+    ApiCall.autoSearch(location[1], location[0]).then(function(results){
+      $scope.searchResult = results
+    });
   }); };
+
 }]);
