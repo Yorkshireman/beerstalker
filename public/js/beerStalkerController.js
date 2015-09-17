@@ -1,6 +1,6 @@
-beerStalker.factory('Search', function($resource) {
+beerStalker.factory('ApiCall', function($resource) {
   return {
-    search: function(cityName) {
+    customSearch: function(cityName) {
       var meetupUrl = 'https://api.meetup.com/2/open_events.json?and_text=true&:text&:country&:city&:key&:text_format&:order'
       var searchResource = $resource(
         meetupUrl, 
@@ -49,11 +49,11 @@ beerStalker.factory('Search', function($resource) {
   }
 });
 
-beerStalker.controller('BeerStalkController', ['$scope', '$resource', 'Search', function($scope, $resource, Search) {
+beerStalker.controller('BeerStalkController', ['$scope', '$resource', 'ApiCall', function($scope, $resource, ApiCall) {
   var lat
   var lon
 
-  $scope.search = function() { Search.search($scope.cityName).then(function(results){
+  $scope.customSearch = function() { ApiCall.customSearch($scope.cityName).then(function(results){
     $scope.searchResult = results
   }); };
 
