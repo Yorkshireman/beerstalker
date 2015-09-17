@@ -90,20 +90,22 @@ main {
 ********************************************************/
 
 .manual-search {
-  width: 100%;
-
   form {
-    input {
-      display: inline;
-      float: left;
-      max-width: 63%;
+    div:first-child, div:nth-child(2) {
+      padding: 0;
     }
+
+    div:first-child {
+      padding-left: 3.5%;
+    }
+
+    div:nth-child(2) {
+      padding-left: 0;
+    }
+
     button {
-      float: right;
       padding-top: 9px;
       height: 2.45em;
-      position: relative;
-      top: 0.2px;
     }
   }
 

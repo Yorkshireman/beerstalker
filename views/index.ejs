@@ -36,21 +36,23 @@
       <section class='manual-search'>
         <h4>or enter a city:</h4>
 
-        <form class='form-inline'>
-          <div class="form-group">
+        <form class="form-group row">
+          <div class='col-xs-7'>
             <input type="text_field" class="form-control" ng-model="cityName">
           </div>
-          <button class="search btn btn-primary" ng-click="search()">Stalk the Beer</button>
-
-          <div id="error-div">
-          <h4>Invalid search term</h4>
-            <h4>(Must be a UK city/town name)</h4>
-          </div>
-
-          <div id="no-results-div">
-            <h4>No free beer there! Try somewhere else?</h4>
+          <div class='col-xs-5'>
+            <button class="search btn btn-primary" ng-click="search()">Stalk the Beer</button>
           </div>
         </form>
+
+        <div id="error-div">
+          <h4>Invalid search term</h4>
+          <h4>(Must be a UK city/town name)</h4>
+        </div>
+
+        <div id="no-results-div">
+          <h4>No free beer there! Try somewhere else?</h4>
+        </div>
       <section>
 
       <ul class='results list-group'>

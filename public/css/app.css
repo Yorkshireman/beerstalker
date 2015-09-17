@@ -7381,20 +7381,18 @@ main {
 /********************************************************
   MANUAL SEARCH SECTION
 ********************************************************/
-.manual-search {
-  width: 100%;
+.manual-search form div:first-child, .manual-search form div:nth-child(2) {
+  padding: 0;
 }
-.manual-search form input {
-  display: inline;
-  float: left;
-  max-width: 63%;
+.manual-search form div:first-child {
+  padding-left: 3.5%;
+}
+.manual-search form div:nth-child(2) {
+  padding-left: 0;
 }
 .manual-search form button {
-  float: right;
   padding-top: 9px;
   height: 2.45em;
-  position: relative;
-  top: 0.2px;
 }
 .manual-search #error-div, .manual-search #no-results-div {
   display: none;
