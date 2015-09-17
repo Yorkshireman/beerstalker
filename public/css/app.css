@@ -7372,7 +7372,7 @@ main {
   margin: 4em 0 4.5em 0;
 }
 .auto-locate button {
-  padding-top: 14px;
+  padding-top: 15px;
 }
 .auto-locate p {
   color: #777777;
@@ -7381,6 +7381,10 @@ main {
 /********************************************************
   MANUAL SEARCH SECTION
 ********************************************************/
+.manual-search h4 {
+  text-align: left;
+  margin-left: 0.5%;
+}
 .manual-search form div:first-child, .manual-search form div:nth-child(2) {
   padding: 0;
 }

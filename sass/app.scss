@@ -73,7 +73,7 @@ main {
   margin: 4em 0 4.5em 0;
 
   button {
-    padding-top: 14px;
+    padding-top: 15px;
   }
 
   p {
@@ -90,6 +90,11 @@ main {
 ********************************************************/
 
 .manual-search {
+  h4 {
+    text-align: left;
+    margin-left: 0.5%;
+  }
+
   form {
     div:first-child, div:nth-child(2) {
       padding: 0;
