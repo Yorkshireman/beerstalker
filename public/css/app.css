@@ -7408,5 +7408,15 @@ main {
 .results li {
   letter-spacing: 0.3px;
 }
+.results li .col-xs-8 {
+  text-align: left;
+}
+.results li .col-xs-8 h4 {
+  margin-top: 0.18em;
+}
+.results li .col-xs-4 {
+  font-size: 18px;
+  text-align: right;
+}
 
 /*# sourceMappingURL=app.css.map */

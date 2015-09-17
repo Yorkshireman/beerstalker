@@ -131,5 +131,15 @@ main {
 .results {
   li {
     letter-spacing: 0.3px;
+    .col-xs-8 {
+      text-align: left;
+      h4 {
+        margin-top: 0.18em;
+      }
+    }
+    .col-xs-4 {
+      font-size: $font-size-h4;
+      text-align: right;
+    }
   }
 }
