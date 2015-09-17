@@ -7405,6 +7405,10 @@ main {
 /********************************************************
   RESULTS DIV
 ********************************************************/
+body {
+  background: url(../images/beer_bg.jpg) white;
+}
+
 .results li {
   letter-spacing: 0.3px;
 }
