@@ -46,6 +46,8 @@ beerStalker.factory('ApiCall', function($resource) {
         }
       });
     }
+
+    // autoSearch:
   }
 });
 
@@ -62,7 +64,7 @@ beerStalker.controller('BeerStalkController', ['$scope', '$resource', 'ApiCall',
    lon = position.coords.longitude;
   });
 
-  $scope.localSearch = function() {
+  $scope.autoSearch = function() {
     var meetupUrl = 'https://api.meetup.com/2/open_events.json?and_text=true&:text&:lat&:lon&:key&:text_format&:order'
     
     var searchLocalResource = $resource(
