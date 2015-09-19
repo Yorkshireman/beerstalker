@@ -39,7 +39,7 @@ beerStalker.factory('ApiCall', function($resource) {
 
         if(filteredResults.length === 0) {
           $('.results').hide();
-          $('#no-results-div').fadeIn(500).delay(8000).fadeOut(1000);
+          $('#no-results-div').fadeIn(500).delay(5000).fadeOut(1000);
           return
         } else {
           $('.results').show();
@@ -82,7 +82,7 @@ beerStalker.factory('ApiCall', function($resource) {
             result.indexOf('free beer')
           }
           catch(err) {
-            $('#error_div').fadeIn(500).delay(8000).fadeOut(1000);
+            $('#error_div').fadeIn(500).delay(5000).fadeOut(1000);
             break;
           }
 
@@ -93,7 +93,8 @@ beerStalker.factory('ApiCall', function($resource) {
 
         if(filteredResults.length === 0) {
           $('.results').hide();
-          $('#no_results_div').fadeIn(500).delay(8000).fadeOut(1000);
+
+          $('#no-results-div').fadeIn(500).delay(6000).fadeOut(1000);
           return
         } else {
           $('.results').show();
