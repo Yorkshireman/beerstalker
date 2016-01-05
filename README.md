@@ -11,7 +11,7 @@ It was built in a team of four on a two-day hackathon. Because of the short time
 
 It is built on [AngularJS](https://angularjs.org/) and deployed to [Heroku](http://heroku.com) using [Express](http://expressjs.com/).  
 
-CSS is written using Bootstrap and Sass. It looks great on viewports of all sizes - handy when you need to find that beer quickly! ;-)  
+CSS is written using Bootstrap and Sass. It looks great on viewports of all sizes - handy when you need to find that beer quickly!  
 
 Although it was initially built as a team, I wrote all of the CSS and did a lot of work on the app after the hackathon, on my own, to fix and improve the app in the following ways:  
 - refactored a lot of code out of the controller into factories,  
