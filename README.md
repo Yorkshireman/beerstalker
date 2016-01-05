@@ -2,7 +2,9 @@
 
 This app filters search results from the [meetup.com](http://www.meetup.com/) api to find events that have free beer!  
 
-It does something that meetup.com cannot do: it searches for events that have the _phrase_ "free beer". Meetup.com itself cannot do this; meetup.com itself can only return results that have "free" and "beer" anywhere in the document. This app additionally filters out irrelevant results, returning only those events that have "free beer" (or "free drinks") ;-)  
+It does something that meetup.com cannot do: it searches for events that have the _phrase_ "free beer". Meetup.com itself cannot do this; meetup.com itself can only return results that have "free" and "beer" anywhere in the document.  
+
+This app additionally filters out irrelevant results, returning only those events that really do have "free beer".  
 
 ####Technologies  
 It was built in a team of four on a two-day hackathon. Because of the short time available and it was a small app, we abandoned writing tests quite early on in the process. I would like to point out that I am a TDD devotee - I occasionally make exceptions for hackathons.  
