@@ -17,8 +17,6 @@ beerStalker.factory('ApiCall', function($resource) {
         { get: { method: 'JSONP'} }
       );
 
-      //nothing gets returned from this function unless you have the 'return' on line 21
-      //the other return further down is only within the scope of that function, not this function.
       return searchForEvents.get().$promise.then(function(response){
         var filteredResults = [];
         for (index = 0; index < response.results.length; index++) {
@@ -64,14 +62,6 @@ beerStalker.factory('ApiCall', function($resource) {
         },
           { get: { method: 'JSONP'} });
 
-      //$promise syntax is not always necessary (not sure why it's needed here), but the
-      //return value of the searchForEvents.get() is passed into the next function as an argument -
-      //in this case 'response' - you can call it whatever you want.
-      //'return' is needed here because line 116 is also a promise (indicated by the .then), so a return value
-      //is needed. This is then passed into the 'function(results)' bit as an argument (called 'results' but, again,
-      // it could have been called whatever I liked). Then, finally (kind of backwards chronologically), the
-      //'customSearch' function is called in the view with 'customSearch()'
-      //also note that a 'return' on line 100 is needed, because autoSearch needs one?
       return searchForEvents.get().$promise.then(function(response){
         var filteredResults = [];
 
@@ -111,10 +101,8 @@ beerStalker.factory('GeoLocation', function() {
 
       var deferred = $.Deferred();
 
-      // if geo location is supported
       if(navigator.geolocation) {
 
-        // get current position and pass the results to getPostalCode or time out after 5 seconds if it fails
         navigator.geolocation.getCurrentPosition(deferred.resolve, this.geoLocationError, {
           timeout: 5000
         });
