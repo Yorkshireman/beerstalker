@@ -1,6 +1,6 @@
 # BeerStalker  
 
-This app filters search results from the [meetup.com](http://www.meetup.com/) api to find events near you that have free beer!  
+This app filters search results from the [meetup.com](http://www.meetup.com/) api to find events that have free beer!  
 
 It does something that meetup.com cannot do: it searches for events that have the _phrase_ "free beer". Meetup.com itself cannot do this; meetup.com itself can only return results that have "free" and "beer" anywhere in the document. This app additionally filters out irrelevant results, returning only those events that have "free beer" (or "free drinks") ;-)  
 
