@@ -18,4 +18,6 @@ Although it was initially built as a team, I wrote all of the CSS and did a lot 
 - made the app only ask for permission to use geolocation if 'autosearch' is used, and will not make the api call until the user's location is found (had to get my head around 'promises' for this),  
 - added error handling for the above,  
 - fixed a bug where 'no results found' was only shown for manual search and not when autosearch was used.  
+  
+Use the app online [here](http://beerstalker.herokuapp.com)
 
