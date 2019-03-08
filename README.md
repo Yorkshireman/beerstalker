@@ -6,7 +6,7 @@ It does something that meetup.com cannot do: it searches for events that have th
 
 This app additionally filters out irrelevant results, returning only those events that really do have "free beer".  
 
-####Technologies  
+#### Technologies  
 It was built in a team of four on a two-day hackathon. Because of the short time available and it was a small app, we abandoned writing tests quite early on in the process. I would like to point out that I am a TDD devotee - I occasionally make exceptions for hackathons.  
 
 It is built on [AngularJS](https://angularjs.org/) and deployed to [Heroku](http://heroku.com) using [Express](http://expressjs.com/).  
@@ -20,4 +20,3 @@ Although it was initially built as a team, I wrote all of the CSS and did a lot 
 - fixed a bug where 'no results found' was only shown for manual search and not when autosearch was used.  
   
 Use the app online [here](http://beerstalker.herokuapp.com)
-
