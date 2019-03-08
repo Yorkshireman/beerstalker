@@ -19,6 +19,10 @@ app.get('/', function(req, res) {
     res.render('index');
 });
 
+app.get('/apiKey', function(req, res) {
+    res.send({ apiKey: process.env.API_KEY });
+});
+
 app.listen(port, function() {
     console.log('Our app is running on http://localhost:' + port);
 });

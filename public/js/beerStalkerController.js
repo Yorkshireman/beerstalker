@@ -1,4 +1,5 @@
-beerStalker.controller('BeerStalkController', ['$scope', '$resource', 'ApiCall', 'GeoLocation', function($scope, $resource, ApiCall, GeoLocation) {
+beerStalker.controller('BeerStalkController', ['$scope', '$resource', 'ApiCall', 'GeoLocation',
+  function($scope, $resource, ApiCall, GeoLocation) {
 
   $scope.autoSearch = function() {
     $scope.loading = true;
@@ -9,10 +10,10 @@ beerStalker.controller('BeerStalkController', ['$scope', '$resource', 'ApiCall',
         $scope.searchResult = results
         $scope.loading = false;
       });
-    }); 
+    });
   };
 
-  $scope.customSearch = function() { 
+  $scope.customSearch = function() {
     $scope.loading = true;
     ApiCall.customSearch($scope.cityName).then(function(results){
       $scope.searchResult = results

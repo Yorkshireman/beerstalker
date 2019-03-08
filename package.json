@@ -2,7 +2,8 @@
   "name": "beerstalker",
   "version": "1.0.0",
   "engines": {
-    "npm": "2.1.x"
+    "node": "8.11.1",
+    "npm": "6.7.0"
   },
   "description": "an app to stalk free beer",
   "main": "index.js",

@@ -1,18 +1,33 @@
 beerStalker.factory('ApiCall', function($resource) {
   return {
-    customSearch: function(cityName) {
+    getApiKey: function() {
+      var keyUrl = '/apiKey';
+
+      var apiKey = $resource(
+        keyUrl, { }
+      );
+
+      return apiKey.get().$promise.then(function(result) {
+        console.log('typeof result: ', typeof result);
+        return result.toJSON().apiKey;
+      });
+    },
+
+    customSearch: async function(cityName) {
+      var apiKey = await this.getApiKey();
+      console.log('apiKey: ', apiKey);
       var meetupUrl = 'https://api.meetup.com/2/open_events.json?and_text=true&:text&:country&:city&:key&:text_format&:order'
-      
+
       var searchForEvents = $resource(
-        meetupUrl, 
+        meetupUrl,
         {
           text_format: "text_format=plain",
           text: "text=free+beer",
           country: "country=gb",
           city: "city=" + cityName,
-          key: 'key=646f252216306e6d712d7c536a3c2565',
+          key: `key=${apiKey}`,
           order: "order=distance",
-          callback: 'JSON_CALLBACK' 
+          callback: 'JSON_CALLBACK'
         },
         { get: { method: 'JSONP'} }
       );
@@ -48,9 +63,9 @@ beerStalker.factory('ApiCall', function($resource) {
 
     autoSearch: function(lat, lon) {
       var meetupUrl = 'https://api.meetup.com/2/open_events.json?and_text=true&:text&:lat&:lon&:key&:text_format&:order'
-      
+
       var searchForEvents = $resource(
-        meetupUrl, 
+        meetupUrl,
         {
           text_format: "text_format=plain",
           text: "text=free+beer",
@@ -58,7 +73,7 @@ beerStalker.factory('ApiCall', function($resource) {
           lon: 'lon=' + lon,
           key: 'key=646f252216306e6d712d7c536a3c2565',
           order: "order=distance",
-          callback: 'JSON_CALLBACK' 
+          callback: 'JSON_CALLBACK'
         },
           { get: { method: 'JSONP'} });
 
